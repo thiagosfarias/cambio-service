@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: cambio-service
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://0.0.0.0:5432/cambio-service
+    username: thi
+    password: 123
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database: postgresql
+  flyway:
+    url: jdbc:postgresql://0.0.0.0:5432/
+    schemas: cambio-service
+    user: thi
+    password: 123
+    locations: classpath:db/migration
+server:
+  port: 8000
